@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>灵刃 VS 影狐</title>
-    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="shell">
@@ -23,7 +22,7 @@
           </div>
         </div>
 
-        <canvas id="game" width="1280" height="720"></canvas>
+        <div id="game" aria-label="游戏画面"></div>
 
         <div class="hud" aria-live="polite">
           <div class="fighter-card left">
@@ -38,6 +37,6 @@
         </div>
       </section>
     </main>
-    <script src="./game.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

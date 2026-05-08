@@ -2,12 +2,9 @@
   color-scheme: dark;
   --ink: #f6efe2;
   --muted: #b8b1a5;
-  --panel: #171717;
   --line: #34312b;
-  --ember: #e94b35;
-  --gold: #f4b84a;
-  --cyan: #45d6ff;
-  --leaf: #54d66f;
+  --ember: #ff553e;
+  --gold: #ffd36f;
 }
 
 * {
@@ -114,10 +111,12 @@ h1 {
   gap: 10px;
 }
 
-canvas {
+#game {
   width: 100%;
   aspect-ratio: 16 / 9;
-  display: block;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   border: 1px solid #5f5143;
   border-radius: 8px;
   background: #141414;
@@ -125,6 +124,12 @@ canvas {
     0 0 0 1px rgba(255, 211, 111, 0.12),
     0 24px 80px rgba(0, 0, 0, 0.56),
     0 0 56px rgba(71, 215, 255, 0.08);
+}
+
+#game canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .hud {
@@ -146,20 +151,6 @@ canvas {
 
 .fighter-card.right {
   text-align: right;
-}
-
-.round-state {
-  min-width: 160px;
-  border: 1px solid #5a4d3e;
-  border-radius: 8px;
-  padding: 10px 12px;
-  background:
-    linear-gradient(90deg, rgba(255, 85, 62, 0.12), rgba(71, 215, 255, 0.12)),
-    rgba(18, 18, 16, 0.72);
-  color: var(--gold);
-  text-align: center;
-  font-weight: 800;
-  box-shadow: inset 0 0 18px rgba(244, 184, 74, 0.08);
 }
 
 @media (max-width: 760px) {
@@ -185,9 +176,5 @@ canvas {
   .fighter-card.right {
     max-width: none;
     text-align: left;
-  }
-
-  .round-state {
-    order: -1;
   }
 }
